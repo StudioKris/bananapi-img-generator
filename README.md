@@ -5,10 +5,10 @@ A simple script and files to build a bootable SD img for the BananaPi board.
 
 *Tested on Ubuntu 14.04 Desktop*
 
-**Required
+##Required
 * GNU parted
 
-**Setup your environement
+##Setup your environement
 You need 7Gb free space to run this script (depending of the RootFS used).
 ```bash
 sudo apt-get update
@@ -29,7 +29,7 @@ This script will clone the following repos to build the system.
 * [sunxi-boards by LeMaker](https://github.com/LeMaker/sunxi-boards.git)
 * [linux-bananapi by LeMaker](https://github.com/LeMaker/linux-bananapi.git)
 
-**Run
+##Run
 ```bash
 ./build.sh
 ```
@@ -38,16 +38,16 @@ You'll need to enter you password to enable the sudo access.
 If you don't need to change the kernel config choose **exit** in the *menuconfig*.
 The builded img is named **bananapi.img**.
 
-***Why...
+###Why...
 - I don't use [bananapi-bsp](https://github.com/LeMaker/bananapi-bsp)?
 This BSP clone the needed repos at every build and take long time.
 - Lot of *sudo* in the script?
 I prefere to run this script in user environement to reduce the risque of bad manipulation. Specialy during the build kernel and modules.
 
-***Inspired by :
+###Inspired by :
 * [LeMaker Wiki](http://wiki.lemaker.org/).
 * [OpenElec create SD script](http://wiki.openelec.tv/index.php?title=Installing_OpenELEC_on_Raspberry_Pi).
 
-**ToDo :
+##ToDo :
 * Add a way to patch the fex file.
 * Add a way to patch the KConfig.
