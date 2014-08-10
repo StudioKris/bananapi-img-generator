@@ -149,6 +149,7 @@ sudo cp -r root-fs/* /mnt
 if [ -f /mnt/README.md ]; then
 	sudo rm -rf /mnt/README.md
 fi
+sync
 
 echo
 echo "###################"
@@ -158,6 +159,18 @@ echo
 sudo mkdir -p /mnt/lib/modules
 sudo rm -rf /mnt/lib/modules/
 sudo cp -r build/modules/lib /mnt/
+sync
+
+echo
+echo "############################################"
+echo "# Creating /proc, /sys, /mnt, /tmp & /boot #"
+echo "############################################"
+echo
+sudo mkdir -p /proc
+sudo mkdir -p /sys
+sudo mkdir -p /mnt
+sudo mkdir -p /tmp
+sudo mkdir -p /boot
 sync
 
 sudo umount /mnt
