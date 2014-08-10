@@ -136,6 +136,8 @@ sudo cp uEnv.txt /mnt
 sudo cp build/.config /mnt
 sync
 
+ls -al /mnt
+
 sudo umount /mnt
 
 echo
@@ -166,12 +168,14 @@ echo "############################################"
 echo "# Creating /proc, /sys, /mnt, /tmp & /boot #"
 echo "############################################"
 echo
-sudo mkdir -p /proc
-sudo mkdir -p /sys
-sudo mkdir -p /mnt
-sudo mkdir -p /tmp
-sudo mkdir -p /boot
+sudo mkdir -p /mnt/proc
+sudo mkdir -p /mnt/sys
+sudo mkdir -p /mnt/mnt
+sudo mkdir -p /mnt/tmp
+sudo mkdir -p /mnt/boot
 sync
+
+ls -al /mnt
 
 sudo umount /mnt
 
